@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		DE04460C1F9950BB002DE812 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE04460B1F9950BB002DE812 /* AppDelegate.swift */; };
-		DE04460E1F9950BB002DE812 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE04460D1F9950BB002DE812 /* ViewController.swift */; };
 		DE0446111F9950BB002DE812 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE04460F1F9950BB002DE812 /* Main.storyboard */; };
 		DE0446131F9950BB002DE812 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE0446121F9950BB002DE812 /* Assets.xcassets */; };
 		DE0446161F9950BB002DE812 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE0446141F9950BB002DE812 /* LaunchScreen.storyboard */; };
@@ -17,7 +16,6 @@
 /* Begin PBXFileReference section */
 		DE0446081F9950BB002DE812 /* ChitChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChitChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE04460B1F9950BB002DE812 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DE04460D1F9950BB002DE812 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DE0446101F9950BB002DE812 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DE0446121F9950BB002DE812 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE0446151F9950BB002DE812 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,14 +52,29 @@
 		DE04460A1F9950BB002DE812 /* ChitChat */ = {
 			isa = PBXGroup;
 			children = (
+				DE04461D1F99527B002DE812 /* Model */,
+				DE04461E1F99528C002DE812 /* View */,
 				DE04460B1F9950BB002DE812 /* AppDelegate.swift */,
-				DE04460D1F9950BB002DE812 /* ViewController.swift */,
-				DE04460F1F9950BB002DE812 /* Main.storyboard */,
 				DE0446121F9950BB002DE812 /* Assets.xcassets */,
-				DE0446141F9950BB002DE812 /* LaunchScreen.storyboard */,
 				DE0446171F9950BB002DE812 /* Info.plist */,
 			);
 			path = ChitChat;
+			sourceTree = "<group>";
+		};
+		DE04461D1F99527B002DE812 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE04461E1F99528C002DE812 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DE04460F1F9950BB002DE812 /* Main.storyboard */,
+				DE0446141F9950BB002DE812 /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +149,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE04460E1F9950BB002DE812 /* ViewController.swift in Sources */,
 				DE04460C1F9950BB002DE812 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,7 +293,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.RenanAvrahami.ChitChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -296,7 +308,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.RenanAvrahami.ChitChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
