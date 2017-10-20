@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>306185109454-4t73eqgav046fabddt04sr8d8cn5vip4.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.306185109454-4t73eqgav046fabddt04sr8d8cn5vip4</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAZpH-J8hjVIbFSnogJEogDSeamKZJ8G_M</string>
+	<key>GCM_SENDER_ID</key>
+	<string>306185109454</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.RenanAvrahami.ChitChat</string>
+	<key>PROJECT_ID</key>
+	<string>chit-chat-1a0db</string>
+	<key>STORAGE_BUCKET</key>
+	<string>chit-chat-1a0db.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:306185109454:ios:58d0f86b129521e9</string>
+	<key>DATABASE_URL</key>
+	<string>https://chit-chat-1a0db.firebaseio.com</string>
+</dict>
+</plist>
