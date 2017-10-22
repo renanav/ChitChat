@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nYd-9c-oiZ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,17 +10,16 @@
     </dependencies>
     <scenes>
         <!--Welcome-->
-        <scene sceneID="0U8-Kw-3vO">
+        <scene sceneID="SXB-qY-SJa">
             <objects>
-                <viewController storyboardIdentifier="welcomeVC" id="NXc-2L-TVu" customClass="WelcomeViewController" customModule="Flash_Chat" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ipf-oR-qGx"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZaT-Vq-oHn"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8y0-mK-AGB">
+                <viewController id="iWj-f1-1I4" customClass="WelcomeViewController" customModule="ChitChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="noB-2S-ZJU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="eJW-Xd-gpv">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wk3-OU-1wm">
                                 <rect key="frame" x="0.0" y="622" width="375" height="45"/>
                                 <color key="backgroundColor" red="0.1899853349" green="0.35768887399999999" blue="0.43821841480000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -31,9 +30,12 @@
                                     <color key="titleColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="0Ay-9q-E2s" kind="show" identifier="goToLogin" id="8u4-bz-FqZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ij6-ze-2rL">
-                                <rect key="frame" x="0.0" y="577" width="375" height="45"/>
+                                <rect key="frame" x="0.0" y="579" width="375" height="45"/>
                                 <color key="backgroundColor" red="0.1819814891" green="0.69426733259999995" blue="0.53024792669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="HYq-Gc-fmx"/>
@@ -46,39 +48,32 @@
                                     <segue destination="3dg-e7-jk7" kind="push" identifier="goToRegistration" id="rcW-IP-VvH"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Zkb-R7-y4V">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="577"/>
-                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Zkb-R7-y4V" firstAttribute="top" secondItem="8y0-mK-AGB" secondAttribute="top" id="0Wt-u5-Ki1"/>
-                            <constraint firstItem="ZaT-Vq-oHn" firstAttribute="top" secondItem="Wk3-OU-1wm" secondAttribute="bottom" id="5Bw-v8-M8M"/>
-                            <constraint firstAttribute="trailing" secondItem="ij6-ze-2rL" secondAttribute="trailing" id="5pP-UT-b6T"/>
-                            <constraint firstItem="ij6-ze-2rL" firstAttribute="leading" secondItem="8y0-mK-AGB" secondAttribute="leading" id="8OS-T6-tr9"/>
-                            <constraint firstItem="ij6-ze-2rL" firstAttribute="top" secondItem="Zkb-R7-y4V" secondAttribute="bottom" id="PSY-yE-hD1"/>
-                            <constraint firstAttribute="trailing" secondItem="Wk3-OU-1wm" secondAttribute="trailing" id="R0B-rh-bq9"/>
-                            <constraint firstItem="Zkb-R7-y4V" firstAttribute="leading" secondItem="8y0-mK-AGB" secondAttribute="leading" id="VoS-GV-Tjq"/>
-                            <constraint firstItem="Wk3-OU-1wm" firstAttribute="leading" secondItem="8y0-mK-AGB" secondAttribute="leading" id="bha-Sj-Fg0"/>
-                            <constraint firstAttribute="trailing" secondItem="Zkb-R7-y4V" secondAttribute="trailing" id="hSc-PA-6Zi"/>
-                            <constraint firstItem="Wk3-OU-1wm" firstAttribute="top" secondItem="ij6-ze-2rL" secondAttribute="bottom" id="kgY-lF-4vI"/>
-                            <constraint firstItem="ij6-ze-2rL" firstAttribute="top" secondItem="Zkb-R7-y4V" secondAttribute="bottom" id="qrN-mO-8Ef"/>
+                            <constraint firstItem="eJW-Xd-gpv" firstAttribute="leading" secondItem="vEg-HQ-w8j" secondAttribute="leading" id="EIi-0n-RH1"/>
+                            <constraint firstItem="Wk3-OU-1wm" firstAttribute="trailing" secondItem="vEg-HQ-w8j" secondAttribute="trailing" id="ERu-yM-AV5"/>
+                            <constraint firstItem="vEg-HQ-w8j" firstAttribute="trailing" secondItem="eJW-Xd-gpv" secondAttribute="trailing" id="Fi5-eA-D7F"/>
+                            <constraint firstItem="Wk3-OU-1wm" firstAttribute="bottom" secondItem="vEg-HQ-w8j" secondAttribute="bottom" id="IK0-Y6-Xuh"/>
+                            <constraint firstItem="Wk3-OU-1wm" firstAttribute="top" secondItem="ij6-ze-2rL" secondAttribute="bottom" constant="-2" id="LBo-Hx-1ja"/>
+                            <constraint firstItem="Wk3-OU-1wm" firstAttribute="leading" secondItem="vEg-HQ-w8j" secondAttribute="leading" id="Lus-6I-G8i"/>
+                            <constraint firstItem="ij6-ze-2rL" firstAttribute="leading" secondItem="vEg-HQ-w8j" secondAttribute="leading" id="Oad-OL-zsy"/>
+                            <constraint firstItem="eJW-Xd-gpv" firstAttribute="top" secondItem="vEg-HQ-w8j" secondAttribute="top" id="gkV-3E-16p"/>
+                            <constraint firstItem="ij6-ze-2rL" firstAttribute="trailing" secondItem="vEg-HQ-w8j" secondAttribute="trailing" id="otZ-Hb-1I5"/>
+                            <constraint firstItem="vEg-HQ-w8j" firstAttribute="bottom" secondItem="eJW-Xd-gpv" secondAttribute="bottom" id="s1q-CT-rab"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="oC3-G9-TM2"/>
+                        <viewLayoutGuide key="safeArea" id="vEg-HQ-w8j"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Welcome" id="JEa-hU-aHg"/>
-                    <connections>
-                        <segue destination="eVT-ij-SeE" kind="push" identifier="goToChat" id="dFu-2v-hF0"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="Welcome" id="321-Cv-oE8" userLabel="Welcome"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qDV-Va-0Vx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pV6-4k-I3O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-102" y="0.0"/>
+            <point key="canvasLocation" x="-223.19999999999999" y="-0.44977511244377816"/>
         </scene>
         <!--Register-->
         <scene sceneID="ydH-S5-LmL">
             <objects>
-                <viewController storyboardIdentifier="registrationVC" id="3dg-e7-jk7" customClass="RegisterViewController" customModule="Flash_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="registrationVC" id="3dg-e7-jk7" customClass="RegisterViewController" customModule="ChitChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0qE-TQ-nsP"/>
                         <viewControllerLayoutGuide type="bottom" id="wMB-iC-ZXJ"/>
@@ -107,7 +102,7 @@
                                             <constraint firstAttribute="height" constant="30" id="9g7-Tx-sNp"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twc-zP-Q1T">
                                         <rect key="frame" x="16" y="165" width="343" height="30"/>
@@ -120,7 +115,7 @@
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="registerPressed:" destination="3dg-e7-jk7" eventType="touchUpInside" id="Yjg-oY-w66"/>
+                                            <action selector="registerPressed:" destination="3dg-e7-jk7" eventType="touchUpInside" id="fnK-jr-2ET"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -155,19 +150,19 @@
                     </view>
                     <navigationItem key="navigationItem" title="Register" id="oWD-gc-AzJ"/>
                     <connections>
-                        <outlet property="emailTextfield" destination="PYV-bc-LOT" id="QiT-kN-fMB"/>
-                        <outlet property="passwordTextfield" destination="fro-QS-2oq" id="8Rr-iy-RmX"/>
+                        <outlet property="emailTextfield" destination="PYV-bc-LOT" id="AhP-0D-EWj"/>
+                        <outlet property="passwordTextfield" destination="fro-QS-2oq" id="ifD-sa-ld5"/>
                         <segue destination="eVT-ij-SeE" kind="push" identifier="goToChat" id="ug7-6e-b3s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qDV-sd-Znq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="788" y="400"/>
+            <point key="canvasLocation" x="1127.2" y="399.85007496251876"/>
         </scene>
         <!--Log In-->
         <scene sceneID="w1m-Jq-y52">
             <objects>
-                <viewController storyboardIdentifier="logInVC" id="0Ay-9q-E2s" customClass="LogInViewController" customModule="Flash_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="logInVC" id="0Ay-9q-E2s" customClass="LogInViewController" customModule="ChitChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vQ3-7g-BM5"/>
                         <viewControllerLayoutGuide type="bottom" id="Jfa-P0-YCg"/>
@@ -195,7 +190,7 @@
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="logInPressed:" destination="0Ay-9q-E2s" eventType="touchUpInside" id="swJ-8F-qSZ"/>
+                                            <action selector="logInPressed:" destination="0Ay-9q-E2s" eventType="touchUpInside" id="mCk-WU-wG7"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CHT-hN-0ZY">
@@ -234,19 +229,19 @@
                     <navigationItem key="navigationItem" title="Log In" id="PbX-c6-jyK"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="emailTextfield" destination="CHT-hN-0ZY" id="bk7-20-GIB"/>
-                        <outlet property="passwordTextfield" destination="dhI-s2-QFA" id="lQb-zc-NQX"/>
+                        <outlet property="emailTextfield" destination="CHT-hN-0ZY" id="oyK-uy-XC9"/>
+                        <outlet property="passwordTextfield" destination="dhI-s2-QFA" id="Iod-lc-RmY"/>
                         <segue destination="eVT-ij-SeE" kind="push" identifier="goToChat" id="3Ar-9V-y0n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ofe-d7-xPJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="788" y="-558"/>
+            <point key="canvasLocation" x="1127.2" y="-558.17091454272872"/>
         </scene>
         <!--Flash Chat-->
         <scene sceneID="m4w-Y1-yGq">
             <objects>
-                <viewController storyboardIdentifier="chatVC" id="eVT-ij-SeE" customClass="ChatViewController" customModule="Flash_Chat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chatVC" id="eVT-ij-SeE" customClass="ChatViewController" customModule="ChitChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KvQ-YX-9fb"/>
                         <viewControllerLayoutGuide type="bottom" id="B5T-eN-SZh"/>
@@ -331,27 +326,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="znu-aK-uLo" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1714" y="0.0"/>
+            <point key="canvasLocation" x="2052" y="-0.44977511244377816"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="QAj-bs-BxX">
+        <scene sceneID="IqN-fM-hZi">
             <objects>
-                <navigationController storyboardIdentifier="navBar1" automaticallyAdjustsScrollViewInsets="NO" id="GLf-36-aNg" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nYd-9c-oiZ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gBZ-cy-qpN">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xj6-u9-UBL">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="NXc-2L-TVu" kind="relationship" relationship="rootViewController" id="kfp-SP-GC3"/>
+                        <segue destination="iWj-f1-1I4" kind="relationship" relationship="rootViewController" id="ch7-5e-CiK"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nwW-bY-VFF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ap8-Q5-25R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-994" y="0.0"/>
+            <point key="canvasLocation" x="-1084" y="0.0"/>
         </scene>
     </scenes>
     <resources>
@@ -359,6 +352,6 @@
         <image name="background1" width="1800" height="1192"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dFu-2v-hF0"/>
+        <segue reference="3Ar-9V-y0n"/>
     </inferredMetricsTieBreakers>
 </document>
