@@ -257,10 +257,10 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="heightConstraint" destination="JAz-3U-aKf" id="yk7-Ua-dcc"/>
-                        <outlet property="messageTableView" destination="297-OI-Hv3" id="ZUr-ha-hQi"/>
-                        <outlet property="messageTextfield" destination="fQS-eG-X8O" id="ulw-i4-WJW"/>
-                        <outlet property="sendButton" destination="ImN-YL-AwS" id="uww-Uh-QXp"/>
+                        <outlet property="heightConstraint" destination="JAz-3U-aKf" id="L9Q-5v-yIE"/>
+                        <outlet property="messageTableView" destination="297-OI-Hv3" id="OUE-bs-rVy"/>
+                        <outlet property="messageTextfield" destination="fQS-eG-X8O" id="nzi-yb-dAd"/>
+                        <outlet property="sendButton" destination="ImN-YL-AwS" id="Hcx-dg-RhJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="znu-aK-uLo" sceneMemberID="firstResponder"/>
