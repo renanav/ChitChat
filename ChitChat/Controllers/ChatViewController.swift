@@ -9,7 +9,8 @@
 import UIKit
 import Firebase
 
-class ChatViewController: UIViewController {
+class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     @IBOutlet weak var sendButton: UIButton!
@@ -19,18 +20,22 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        messageTableView.delegate = self
+        messageTableView.dataSource = self
+        
+//        Register the custom cell xib file
+        messageTableView.register(UINib(nibName: "MessageCell", bundle: nil), forCellReuseIdentifier: "customMessageCell")
+        
     }
     
-    ///////////////////////////////////////////
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
     
-    //MARK: - TableView DataSource Methods
-    
-    
-    
-    
-    ///////////////////////////////////////////
-    
-    //MARK:- TextField Delegate Methods
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customMessageCell", for: indexPath) as! CustomMessageCell
+        
+    }
     
     
     

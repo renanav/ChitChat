@@ -32,7 +32,7 @@ class RegisterViewController: UIViewController {
         FIRAuth.auth()?.createUser(withEmail: emailTextfield.text!, password: passwordTextfield.text!, completion: { (user, error) in
             if error != nil {
                 // failure
-//                print(error)
+                print(error!)
             }
             else {
                 // success
