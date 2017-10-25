@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import Firebase
 
 class ChatViewController: UIViewController {
-
+    
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var messageTextfield: UITextField!
@@ -17,24 +18,45 @@ class ChatViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    ///////////////////////////////////////////
+    
+    //MARK: - TableView DataSource Methods
+    
+    
+    
+    
+    ///////////////////////////////////////////
+    
+    //MARK:- TextField Delegate Methods
+    
+    
+    
+    
+    
+    ///////////////////////////////////////////
+    
+    
+    //MARK: - Send & Recieve from Firebase
+    
+    
+    
+    @IBAction func sendPressed(_ sender: Any) {
     }
-    */
-
+    
+    
+//    Log out the user and send them back to WelcomeViewController
+    @IBAction func logOutPressed(_ sender: Any) {
+        
+        do {
+            try FIRAuth.auth()?.signOut()
+            navigationController?.popToRootViewController(animated: true) //will navigate to the welcome screen
+        }
+        catch {
+            print("Error: there was a problem signing out")
+        }
+    }
+    
 }

@@ -207,7 +207,7 @@
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="sendPressed:" destination="eVT-ij-SeE" eventType="touchUpInside" id="w0t-qa-uN2"/>
+                                            <action selector="sendPressed:" destination="eVT-ij-SeE" eventType="touchUpInside" id="P1M-QE-ELh"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -251,7 +251,7 @@
                     <navigationItem key="navigationItem" title="Flash Chat" id="UWr-u6-pYI">
                         <barButtonItem key="rightBarButtonItem" title="Log Out" id="mmS-oE-HEn">
                             <connections>
-                                <action selector="logOutPressed:" destination="eVT-ij-SeE" id="10w-hz-4jx"/>
+                                <action selector="logOutPressed:" destination="eVT-ij-SeE" id="frl-cc-6wE"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -290,7 +290,7 @@
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="3dg-e7-jk7" kind="show" identifier="goToRegistration" id="kHo-9C-2UL"/>
+                                    <segue destination="0Ay-9q-E2s" kind="show" id="bth-VH-gwh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBx-EA-B1V">
@@ -304,7 +304,7 @@
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="0Ay-9q-E2s" kind="show" id="o28-tJ-wma"/>
+                                    <segue destination="3dg-e7-jk7" kind="show" id="elk-P4-Pwn"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="uND-8S-3be">
