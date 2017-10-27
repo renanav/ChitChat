@@ -67,7 +67,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     
-    //    Log out the user and send them back to WelcomeViewController
+    //    Log out the user and send him back to the WelcomeViewController
     @IBAction func logOutPressed(_ sender: Any) {
         
         do {
