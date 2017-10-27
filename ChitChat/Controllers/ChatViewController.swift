@@ -23,20 +23,27 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         messageTableView.delegate = self
         messageTableView.dataSource = self
         
-//        Register the custom cell xib file
+        // Register the custom cell xib file
         messageTableView.register(UINib(nibName: "MessageCell", bundle: nil), forCellReuseIdentifier: "customMessageCell")
         
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
-    }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "customMessageCell", for: indexPath) as! CustomMessageCell
+        
+        let messageArray = ["First message", "Second message", "Third message"]
+        
+        cell.messageBody.text = messageArray[indexPath.row]
+        return cell
         
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return 3
+    }
     
     
     
@@ -52,7 +59,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     
-//    Log out the user and send them back to WelcomeViewController
+    //    Log out the user and send them back to WelcomeViewController
     @IBAction func logOutPressed(_ sender: Any) {
         
         do {
