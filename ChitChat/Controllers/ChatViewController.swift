@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
     
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
@@ -23,6 +23,11 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         messageTableView.delegate = self
         messageTableView.dataSource = self
         
+        messageTextfield.delegate = self
+        
+//        When the message table view itslef is tapped, it will collapse the keyboard, and slide the message textfield down
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tableViewTapped))
+        messageTableView.addGestureRecognizer(tapGesture)
         // Register the custom cell xib file
         messageTableView.register(UINib(nibName: "MessageCell", bundle: nil), forCellReuseIdentifier: "customMessageCell")
         
@@ -44,19 +49,36 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return 3
+        return 3
     }
     
-//    Adjust the messages cell height to its content
+    @objc func tableViewTapped() { //@objc was added to satisfy the #selector
+        messageTextfield.endEditing(true)
+    }
+    
+    //    Adjust the messages cell height to its content
     func configureTableView() {
         messageTableView.rowHeight = UITableViewAutomaticDimension
         messageTableView.estimatedRowHeight = 120.0
     }
     
+    //MARK:- TextField Delegate Methods.  These mthods will adjust and control the appearance of the keyboard when typing a message
+    //    Height increase
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.heightConstraint.constant = 320
+            self.view.layoutIfNeeded()
+        })
+    }
     
+    //    Height decrease
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.heightConstraint.constant = 50
+            self.view.layoutIfNeeded()
+        })
+    }
     
-    
-    ///////////////////////////////////////////
     
     
     //MARK: - Send & Recieve from Firebase
