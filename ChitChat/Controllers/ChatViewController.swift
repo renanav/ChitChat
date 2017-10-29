@@ -48,6 +48,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.messageBody.text = messageArray[indexPath.row].messageBody
         cell.senderUsername.text = messageArray[indexPath.row].sender
         cell.avatarImageView.image = UIImage(named: "egg")
+        print("func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell has been called")
         return cell
         
     }
@@ -98,6 +99,12 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         let messageDictionary = ["Sender" : FIRAuth.auth()?.currentUser?.email,
                                  "MessageBody" : messageTextfield.text!]
         // save the messages in a messageDictionary distionary
+        if self.messageTextfield.text!.isEmpty{
+            print("Cant send and empty message")
+            messageTextfield.endEditing(false)
+            messageTextfield.isEnabled = true
+            sendButton.isEnabled = true
+        } else {
         messagesDB.childByAutoId().setValue(messageDictionary) {
             (error, ref) in
             if error != nil {
@@ -110,6 +117,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                 // clear the message text field after sending the message
                 self.messageTextfield.text = ""
             }
+        }
         }
     }
     
