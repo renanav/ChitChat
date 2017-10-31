@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import ChameleonFramework
 
 class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
@@ -37,6 +38,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         configureTableView()
         retreiveMessages()
         
+        messageTableView.separatorStyle = .none
+        
     }
     
     
@@ -49,6 +52,16 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.senderUsername.text = messageArray[indexPath.row].sender
         cell.avatarImageView.image = UIImage(named: "egg")
         print("func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell has been called")
+        
+        // Set different colors to message cells for messages that sent by us and not by us
+        if cell.senderUsername.text == FIRAuth.auth()?.currentUser?.email {
+            cell.avatarImageView.backgroundColor = UIColor.flatMint()
+            cell.messageBackground.backgroundColor = UIColor.flatSkyBlue()
+        } else {
+            cell.avatarImageView.backgroundColor = UIColor.flatWatermelon()
+            cell.messageBackground.backgroundColor = UIColor.flatGray()
+        }
+        
         return cell
         
     }
